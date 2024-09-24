@@ -35,11 +35,12 @@ public class Main {
         // вывод полученных заголовков
         //Arrays.stream(response.getAllHeaders()).forEach(System.out::println);
 
-        List<CatsAreTheBestPets>listOfCats=mapper.readValue(
+        List<CatsAreTheBestPets> listOfCats = mapper.readValue(
                 response.getEntity().getContent(),
-                new TypeReference<List<CatsAreTheBestPets>>() {});
+                new TypeReference<List<CatsAreTheBestPets>>() {
+                });
         listOfCats.stream()
-                .filter(cat -> cat.getUpvotes()!=null)
+                .filter(cat -> cat.getUpvotes() != null)
                 .forEach(System.out::println);
 
     }

@@ -45,6 +45,7 @@ public class CatsAreTheBestPets {
     public String getUpvotes() {
         return upvotes;
     }
+
     @Override
     public String toString() {
         return "CatsAreTheBestPets" +
